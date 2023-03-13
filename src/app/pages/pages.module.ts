@@ -8,13 +8,21 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { FormsModule , ReactiveFormsModule} from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
+import { VisitorsComponent } from './visitors/visitors.component';
+import { ResidentsComponent } from './residents/residents.component';
+import { SecurityComponent } from './security/security.component';
+import { SettingsComponent } from './settings/settings.component';
 
 
 @NgModule({
   declarations: [
     MainpageComponent,
     DashboardComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    VisitorsComponent,
+    ResidentsComponent,
+    SecurityComponent,
+    SettingsComponent
   ],
   imports: [
     CommonModule,
