@@ -3,16 +3,16 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-residents',
   templateUrl: './residents.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class ResidentsComponent implements OnInit {
+  loading = true;
 
-  loading = false;
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+    setInterval(() => {
+      this.loading = false;
+    }, 1500);
   }
-
 }

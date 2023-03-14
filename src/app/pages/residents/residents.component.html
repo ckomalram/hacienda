@@ -5,7 +5,7 @@
         <input
           type="text"
           class="form-control"
-          placeholder="Buscar Vehiculo"
+          placeholder="Buscar Residente"
           #txtBuscar
         />
       </div>
@@ -13,7 +13,7 @@
   </div>
 </div>
 
-<div class="row animated fadeIn fast">
+<div class="row animated fadeIn fast" *ngIf="loading">
   <div class="col-12">
     <div class="alert alert-info text-center">
       <h4 class="alert-heading">Cargando</h4>
@@ -30,17 +30,17 @@
         <div class="row">
           <div class="col-8">
             <h4 class="card-title">
-              Total de Vehiculos: (0)
+              Total de Residentes: (0)
             </h4>
             <h6 class="card-subtitle">
-              Vehiculos registradas en la aplicación
+              Residentes registrados en la aplicación
             </h6>
           </div>
           <div class="col">
             <div class="text-right">
               <button class="btn btn-primary"  >
                 <i class="fa fa-plus-circle"></i>
-                Crear Vehiculo
+                Crear Residente
               </button>
             </div>
           </div>
@@ -50,23 +50,23 @@
           <table class="table table-bordered">
             <thead>
               <tr>
-                <th >Placa</th>
-                <th >Modelo</th>
-                <th >Marca</th>
+                <th >Cédula</th>
+                <th >Nombre</th>
+                <th ># Casa</th>
                 <th >Estado</th>
                 <th class="w100">Acciones</th>
               </tr>
             </thead>
             <tbody>
               <tr >
-                  <td >Placa</td>
-                  <td >Modelo</td>
-                  <td >Marca</td>
-                  <td >Estado</td>
+                  <td >8-873-387</td>
+                  <td >Carlyle Komalram</td>
+                  <td >A207</td>
+                  <td >Activo</td>
 
                 <td >
                   <a class="cursor" >
-                    <i class="fa fa-save text-success"></i>
+                    <i class="fa fa-pencil text-info"></i>
                   </a>
 
                   <a class="cursor" >
