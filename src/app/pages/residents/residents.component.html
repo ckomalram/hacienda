@@ -1,1 +1,83 @@
-<p>residents works!</p>
+<div class="row animated fadeIn fast">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Buscar Vehiculo"
+          #txtBuscar
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row animated fadeIn fast">
+  <div class="col-12">
+    <div class="alert alert-info text-center">
+      <h4 class="alert-heading">Cargando</h4>
+      <i class="fa fa-spin fa-refresh fa-2x"></i>
+      <p class="mb-0">Por favor espere</p>
+    </div>
+  </div>
+</div>
+
+<div class="row animated fadeIn fast" *ngIf="!loading">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-8">
+            <h4 class="card-title">
+              Total de Vehiculos: (0)
+            </h4>
+            <h6 class="card-subtitle">
+              Vehiculos registradas en la aplicación
+            </h6>
+          </div>
+          <div class="col">
+            <div class="text-right">
+              <button class="btn btn-primary"  >
+                <i class="fa fa-plus-circle"></i>
+                Crear Vehiculo
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th >Placa</th>
+                <th >Modelo</th>
+                <th >Marca</th>
+                <th >Estado</th>
+                <th class="w100">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr >
+                  <td >Placa</td>
+                  <td >Modelo</td>
+                  <td >Marca</td>
+                  <td >Estado</td>
+
+                <td >
+                  <a class="cursor" >
+                    <i class="fa fa-save text-success"></i>
+                  </a>
+
+                  <a class="cursor" >
+                    <i class="fa fa-close text-danger"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

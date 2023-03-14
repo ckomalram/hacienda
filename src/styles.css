@@ -8,6 +8,7 @@
 
 #themecolors .selector,.cursor {
   cursor: pointer;
+  padding: .5rem;
 }
 
 

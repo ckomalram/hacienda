@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResidentsComponent implements OnInit {
 
+  loading = false;
+
   constructor() { }
 
   ngOnInit(): void {
