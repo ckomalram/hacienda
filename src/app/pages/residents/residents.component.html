@@ -1,4 +1,4 @@
-<div class="row animated fadeIn fast">
+<div class="row animated fadeIn fast" *ngIf="!loading">
   <div class="col-12">
     <div class="card">
       <div class="card-body">
@@ -7,6 +7,7 @@
           class="form-control"
           placeholder="Buscar Residente"
           #txtBuscar
+          autocomplete="off"
         />
       </div>
     </div>
@@ -30,7 +31,7 @@
         <div class="row">
           <div class="col-8">
             <h4 class="card-title">
-              Total de Residentes: (0)
+              Total de Residentes: ({{residentsData.totalResidents}})
             </h4>
             <h6 class="card-subtitle">
               Residentes registrados en la aplicación
@@ -38,7 +39,7 @@
           </div>
           <div class="col">
             <div class="text-right">
-              <button class="btn btn-primary"  >
+              <button class="btn btn-primary" (click)="addResident()"  >
                 <i class="fa fa-plus-circle"></i>
                 Crear Residente
               </button>
@@ -58,18 +59,19 @@
               </tr>
             </thead>
             <tbody>
-              <tr >
-                  <td >8-873-387</td>
-                  <td >Carlyle Komalram</td>
-                  <td >A207</td>
-                  <td >Activo</td>
+              <tr *ngFor="let resident of residentsData.residents" >
+                  <td >{{resident.identificacion}}</td>
+                  <td >{{resident.nombre | titlecase}}</td>
+                  <td >{{resident.casa}}</td>
+                  <td >{{resident.estado? 'Activo':'Inactivo'}}</td>
+
 
                 <td >
-                  <a class="cursor" >
+                  <a class="cursor" (click)="editResident(resident._id)" >
                     <i class="fa fa-pencil text-info"></i>
                   </a>
 
-                  <a class="cursor" >
+                  <a class="cursor" (click)="removeResident(resident._id)">
                     <i class="fa fa-close text-danger"></i>
                   </a>
                 </td>
