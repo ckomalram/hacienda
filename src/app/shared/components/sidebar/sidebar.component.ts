@@ -4,17 +4,30 @@ import { SidebarService } from 'src/app/services/sidebar.service';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css']
+  styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent implements OnInit {
+  /**
+   * TODO: CREAR METODO DE LOGOUT E IMPLEMENTAR EN BOTON DE HTML
+   * TODO: IMPLEMENTAR SERVICIO PARA HACER LOGOUT
+   * TODO: CREAR PRUEBA DE INTEGRACION CON EL SERVICIO DE LOGOUT
+   * TODO: CREAR PRUEBA unitaria de array de menus
+   * TODO: CREAR PRUEBA DE INTEGRACION de click de botones en el html
+   **/
+
+  // public user: User;
 
   menuItems: any[];
 
   constructor(private sidebarservice: SidebarService) {
     this.menuItems = sidebarservice.menu;
-   }
-
-  ngOnInit(): void {
   }
 
+  ngOnInit(): void {}
+
+  logout() {
+    console.log('Saliendo de la aplicación');
+    // this.userService.logout();
+
+  }
 }
