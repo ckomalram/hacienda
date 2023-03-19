@@ -19,25 +19,25 @@ const routes: Routes = [
         data: { titulo: 'dashboard' },
       },
       {
-        path: 'residents-list',
+        path: 'residents',
         component: ResidentsComponent,
         data: { titulo: 'Residentes' },
       },
-      {
-        path: 'visitors-list',
-        component: VisitorsComponent,
-        data: { titulo: 'Visitantes' },
-      },
-      {
-        path: 'security-list',
-        component: SecurityComponent,
-        data: { titulo: 'Personal' },
-      },
-      {
-        path: 'configuration',
-        component: SettingsComponent,
-        data: { titulo: 'Configuración' },
-      },
+      // {
+      //   path: 'visitors-list',
+      //   component: VisitorsComponent,
+      //   data: { titulo: 'Visitantes' },
+      // },
+      // {
+      //   path: 'security-list',
+      //   component: SecurityComponent,
+      //   data: { titulo: 'Personal' },
+      // },
+      // {
+      //   path: 'configuration',
+      //   component: SettingsComponent,
+      //   data: { titulo: 'Configuración' },
+      // },
       // { path: 'grafica1', component: Grafica1Component , data: {titulo: 'grafica1'} },
       // { path: 'progress', component: ProgressComponent , data: {titulo: 'progress'} },
       // { path: 'account-settings', component: AccountSettingComponent , data: {titulo: 'account-settings'} },
