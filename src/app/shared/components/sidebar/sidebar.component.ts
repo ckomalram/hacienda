@@ -6,7 +6,7 @@ import { SidebarService } from 'src/app/services/sidebar.service';
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent  {
   /**
    * TODO: CREAR METODO DE LOGOUT E IMPLEMENTAR EN BOTON DE HTML
    * TODO: IMPLEMENTAR SERVICIO PARA HACER LOGOUT
@@ -23,11 +23,11 @@ export class SidebarComponent implements OnInit {
     this.menuItems = sidebarservice.menu;
   }
 
-  ngOnInit(): void {}
+  // ngOnInit(): void {}
 
   logout() {
     console.log('Saliendo de la aplicación');
+    return true;
     // this.userService.logout();
-
   }
 }
